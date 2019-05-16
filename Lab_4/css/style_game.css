@@ -1,0 +1,294 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	outline: none;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	font-size: 20px;
+	line-height: 25px;
+	color: #00293c;
+	width: 100%;
+	height: 100%;
+	background: #ffffff;
+	position: relative;
+	word-wrap: break-word;
+	text-align: justify;
+	-webkit-font-smoothing: antialiased!important;
+	font-smoothing: antialiased!important;
+	-moz-osx-font-smoothing: grayscale!important;
+	font-smooth: always!important;
+}
+
+a,
+.monster,
+.aim * {
+	-webkit-transition: all 0.7s ease-out;
+	-moz-transition: all 0.7s ease-out;
+	-o-transition: all 0.7s ease-out;
+	transition: all 0.7s ease-out;
+}
+
+.author {
+	padding: 5px 5%;
+	z-index: 9;
+	position: fixed;
+	bottom: 0px;
+	width: 90%;
+	background: #eeeeee;
+	font-size: 13px;
+	line-height: 15px;
+	border-top: 1px solid #cccccc;
+	height: 33px;
+}
+
+.author p {
+	margin: 0px;
+}
+
+.wrapper {
+	width: 800px;
+	height: 600px;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	margin: 0 0 0 -400px;
+	overflow: hidden;
+}
+
+.game-window {
+	position: relative;
+	cursor: url('../images/target.png'), auto;
+}
+
+.game-window:before {
+	display: none;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.5);
+	z-index: 999999;
+}
+
+.game-window.hit:before {
+	display: block;
+}
+
+.game-window,
+.game-bg {
+	width: 100%;
+	height: 100%;
+}
+
+.game-bg {
+	background: #b5e61d;
+}
+
+.grass,
+[class^='element'],
+.monster,
+.score,
+.monster.hit:before,
+.monster.hit:after {
+	position: absolute
+}
+
+.grass {
+	background: url('../images/grass.png') center center no-repeat;
+	width: 30px;
+	height: 30px
+}
+
+.grass-1 {
+	top: 20px;
+	left: 475px;
+}
+
+.grass-2 {
+	top: 350px;
+	left: 115px;
+}
+
+.grass-3 {
+	top: 115px;
+	left: 190px;
+}
+
+.grass-4 {
+	bottom: 67px;
+	left: 240px;
+}
+
+.grass-5 {
+	bottom: 120px;
+	right: 275px;
+}
+
+[class^='element'] {
+	z-index: 99;
+}
+
+[class~='with-monster'] {
+	z-index: 999;
+}
+
+.element-1 {
+	top: 150px;
+	right: 20px;
+}
+
+.element-2 {
+	top: 50px;
+	left: 50px;
+}
+
+.element-3 {
+	top: 250px;
+	left: 320px;
+}
+
+.element-4 {
+	top: 90px;
+	left: 250px;
+}
+
+.element-5 {
+	bottom: 25px;
+	left: 10px;
+}
+
+.element-6 {
+	bottom: 50px;
+	right: 55px;
+}
+
+.element-7 {
+	top: 80px;
+	left: 540px;
+}
+
+.element-8 {
+	bottom: 150px;
+	left: 190px;
+}
+
+.element-9 {
+	top: 275px;
+	right: 210px;
+}
+
+.element-10 {
+	bottom: 150px;
+	left: -100px;
+}
+
+.tree {
+	background: #804500;
+	width: 110px;
+	height: 230px;
+}
+
+.bush {
+	background: #115800;
+	width: 175px;
+	height: 120px;
+}
+
+.stone {
+	background: #5a5a5a;
+	width: 100px;
+	height: 110px;
+}
+
+.monster {
+	line-height: 0;
+	z-index: 1;
+	top: 0;
+	left: 50%;
+	margin-left: -50px;
+	cursor: url('../images/target_pointed.png'), auto;
+	overflow: hidden
+}
+
+.monster.active {
+	top: -100px
+}
+
+.monster-2 {
+	top: 0;
+	left: 0;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	margin-left: 0;
+}
+
+.monster-2.active {
+	top: 0;
+	left: -100px;
+}
+
+.monster-6 {
+	top: 40px;
+	left: 0;
+	margin-left: 0;
+}
+
+.monster-6.active {
+	top: 40px;
+	left: 375px;
+	margin-left: 0;
+}
+
+.monster.hit:before,
+.monster.hit:after {
+	display: block;
+	content: '';
+	width: 2px;
+	height: 200px;
+	background: #f00;
+	top: -20px;
+	left: 50%;
+	margin-top: -30px
+}
+
+.monster.hit:before {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.monster.hit:after {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.score {
+	bottom: 5px;
+	right: 15px;
+	z-index: 5;
+	color: #e80000;
+	font-size: 18px;
+}
+
+.points {
+	font-size: 1.2em;
+	line-height: 1.5em;
+	font-weight: bold
+}
+
+.nature {
+	position: relative;
+	z-index: 9
+}

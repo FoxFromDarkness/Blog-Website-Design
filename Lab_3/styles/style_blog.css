@@ -1,0 +1,60 @@
+header{
+    text-align: center;
+    margin: 0px;
+    background-image: url(../images/bg_blog.jpg);
+    background-attachment: fixed;
+}
+
+nav{
+    background-color: #928c8c;
+    text-align: center;
+    
+    height: 50px;
+    
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px; 
+    background-color: #fff;
+}
+
+body{
+
+    background-color: #474747;
+    color: #ffffff;
+    text-align: center;
+}
+
+.MenuButtons{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    float: left;
+    width: 25%;
+    margin-left: 0px;
+    height: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    color: #363636;
+}
+.MenuButtons:hover{
+    background-color: #838383;
+}
+
+.SocialMedia{
+
+    float: right;
+    text-align: right;
+    margin-left: -308px;
+    
+    }
+
+.NewPost{
+    margin-top: 20px;
+}
+a{
+    width: 600px; 
+    color: #ffffff;
+    text-align: center;
+}
